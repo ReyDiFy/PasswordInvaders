@@ -1,0 +1,10 @@
+<resources>
+    <color name="bg">#050F1A</color>
+    <color name="bg_purple">#1A0F2E</color>
+    <color name="cyan">#00F0FF</color>
+    <color name="cyan_dim">#3300F0FF</color>
+    <color name="purple">#A855F7</color>
+    <color name="muted">#7A8FA6</color>
+    <color name="danger">#FF3B5C</color>
+    <color name="field">#E8E4EC</color>
+</resources>

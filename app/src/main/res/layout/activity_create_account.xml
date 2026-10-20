@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView style="@style/Neon.Title" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="32dp"
+            android:text="CREATE ACCOUNT"/>
+        <TextView style="@style/Neon.Caption" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="6dp"
+            android:text="ENTER USER DETAILS"/>
+
+        <LinearLayout android:id="@+id/dots" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:orientation="horizontal" android:gravity="center"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:orientation="vertical"
+            android:background="@drawable/field_bg" android:paddingStart="10dp"
+            android:paddingEnd="10dp" android:paddingTop="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Username" android:textSize="10sp" android:textColor="#49454F"/>
+            <EditText android:id="@+id/etUsername" android:layout_width="match_parent"
+                android:layout_height="36dp" android:background="@null" android:hint="Input"
+                android:inputType="textNoSuggestions" android:maxLength="20"
+                android:textSize="13sp" android:textColor="#1D1B20" android:textColorHint="#79747E"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:orientation="vertical"
+            android:background="@drawable/field_bg" android:paddingStart="10dp"
+            android:paddingEnd="10dp" android:paddingTop="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Email" android:textSize="10sp" android:textColor="#49454F"/>
+            <EditText android:id="@+id/etEmail" android:layout_width="match_parent"
+                android:layout_height="36dp" android:background="@null" android:hint="Input"
+                android:inputType="textEmailAddress"
+                android:textSize="13sp" android:textColor="#1D1B20" android:textColorHint="#79747E"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:orientation="vertical"
+            android:background="@drawable/field_bg" android:paddingStart="10dp"
+            android:paddingEnd="10dp" android:paddingTop="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Password (6-digit key, use keypad)" android:textSize="10sp"
+                android:textColor="#49454F"/>
+            <TextView android:id="@+id/tvPin" android:layout_width="match_parent"
+                android:layout_height="36dp" android:gravity="center_vertical"
+                android:text="Input" android:textSize="13sp" android:textColor="#79747E"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnCreate" style="@style/Neon.Button"
+            android:layout_marginTop="24dp" android:text="CREATE"/>
+
+        <include layout="@layout/view_keypad" android:layout_marginTop="20dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

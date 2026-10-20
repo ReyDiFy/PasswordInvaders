@@ -1,0 +1,53 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView style="@style/Neon.Title" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="32dp"
+            android:text="ACCESS TERMINAL"/>
+        <TextView style="@style/Neon.Caption" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="6dp"
+            android:text="ENTER CODES TO AUTHENTICATE"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:padding="12dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/card_purple"
+            android:id="@+id/agentCard">
+            <TextView android:layout_width="36dp" android:layout_height="36dp"
+                android:gravity="center" android:text="👤" android:textSize="16sp"
+                android:background="@drawable/key_purple"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginStart="12dp">
+                <TextView android:id="@+id/agentName" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#FFFFFF"
+                    android:typeface="monospace" android:textStyle="bold" android:textSize="12sp"
+                    android:text="NO AGENT FOUND"/>
+                <TextView style="@style/Neon.Caption" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:gravity="start"
+                    android:text="ROLE: DEFENDER / CLASS 15"
+                    android:id="@+id/agentRole"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/dots" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="28dp"
+            android:orientation="horizontal" android:gravity="center"/>
+        <TextView android:id="@+id/hint" style="@style/Neon.Caption"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:textColor="@color/cyan"
+            android:text="ENTER 6-DIGIT SECURITY KEY"/>
+
+        <Button android:id="@+id/btnAuth" style="@style/Neon.Button"
+            android:layout_marginTop="24dp" android:text="AUTHENTICATE"/>
+        <TextView android:id="@+id/linkCreate" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:gravity="center" android:padding="8dp" android:textColor="@color/purple"
+            android:typeface="monospace" android:textSize="12sp" android:text="Create Account"/>
+
+        <include layout="@layout/view_keypad" android:layout_marginTop="16dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
